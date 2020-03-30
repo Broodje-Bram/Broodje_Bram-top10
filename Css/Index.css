@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 9%;
+  background-color: #031321;
+}
+.avatar{
+  width: 100px;
+  height: 62px;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 50px;
+}
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+.nav__links li {
+  padding: 0px 10px;
+}
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover {
+  color: red;
+}
+.cta {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: red;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.cta:hover {
+  background-color: yellowgreen;
+}
+.menu {
+  display: none;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+.video-background{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+@media (min-aspect-ratio:16/9){
+  .video-background{
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio:16/9){
+  .video-background{
+    width: auto;
+    height: 100%;
+  }
+}
+.Welkom_bericht{
+  position: relative;
+  text-align: center;
+  top: 150px;
+}
+.Welkom_bericht h1{
+  font-size: 80px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  font-family: 'Pacifico', cursive
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: rgba(0,51,255,1);
+  text-shadow: 0 0 20px red;
+}
+.Welkom_bericht a{
+  font-size: 20px;
+  font-weight: 50;
+  margin-top: 10px;
+  color: rgba(255,25,80,1);
+}
+.clock{
+  position: absolute;
+  top: 92%;
+  left: 93%;
+  transform: translateX(-50%) translateY(-50%);
+  color: purple;
+  font-size: 20px;
+  border: 1px solid red;
+  padding: 0px 5px 0px 5px;
+  text-shadow: 0 0 20px purple;
+  }

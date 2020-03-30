@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Broodjes</title>
+        <link rel="stylesheet" type="text/css" href="Css/Broodjecss.css">
+        <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    </head>
+  <body>
+    <main>
+      <section>
+          <br><br><br>
+          <h1>De top 5 beste Broodjes</h1>
+          <p1> Nummer 1 Classic Cuban Midnight (Medianoche) Sandwich </p1>
+          <p>"This is one of the more famous sandwiches straight out of the island of Cuba," says Pretty Pink Bullets. Load thinly-sliced ham, pork, Swiss cheese, and dill pickle slices into sweet rolls and heat in a sandwich press for crispy, melty perfection.</p>
+          <img src="Css/fotos/Broodjenr1.jpg" alt="BroodjeNr1">
+
+          <p1>Nummer 2 Roasted Pork Banh Mi (Vietnamese Sandwich) </p1>
+          <p>Chef John explains the brilliance of this Vietnamese sandwich: "Not only do we get amazing contrasts in flavor and texture, but also the temperature difference between the crisp, warm, meat-filled roll and the cool, crunchy vegetables makes this so much fun to eat. This isn't just one of the best sandwiches I've ever had, it's one of the best things, period."</p>
+          <img src="Css/fotos/Broodjenr2.jpg" alt="BroodjeNr2">
+
+          <p1>Nummer 3 Best Hamburger Ever</p1>
+          <p>It really doesn't get more American than a big, juicy burger, and recipe-reviewer Rico confirms that "this really is the best tasting hamburger ever!"</p>
+          <img src="Css/fotos/Broodjenr3.jpg" alt="BroodjeNr3">
+
+          <p1>Nummer 4 Lobster Rolls</p1>
+          <p>This classic New England sandwich is "best served on a regular ol' hot dog bun, which I prefer grilled," says naples34102. The only thing that'll keep you from making these every night is the price of lobster!</p>
+          <img src="Css/fotos/Broodjenr4.jpg" alt="BroodjeNr4">
+
+          <p1>Nummer 5 Philly Cheesesteak Sandwich with Garlic Mayo</p1>
+          <p>Recipe-reviewer cmastheryr got some tips from his "Philly Phriend" before making this sandwich: "I made six sandwiches. Two with provolone, two with mozzarella, and (Philly) two with cheeze whiz. Provolone and mozzarella were equal in outstanding taste. The cheeze whiz was good but not up to the others."</p>
+          <img src="Css/fotos/Broodjenr5.jpg" alt="BroodjeNr5">
+
+      </section>
+    </main>
+    <div id="MyClockDisplay" class="clock"></div>
+    <script type="text/javascript">
+        function showtime(){
+            var date = new Date();
+            var h = date.getHours(); // 0 - 23 uur
+            var m = date.getMinutes(); // 0 -59 min
+            var s = date.getSeconds(); //0 -59
+
+            if(h == 0){
+                h = 12;
+            }
+
+
+            if(h < 10){
+                h = "0" + h;
+            }
+            
+            if(m < 10){
+                m = "0" + m;
+            }
+
+            if(s < 10){
+                s = "0" + s;
+            }
+
+            var time = h + ":" + m + ":" + s;
+            document.getElementById("MyClockDisplay").innertext = time;
+            document.getElementById("MyClockDisplay").textContent = time;
+
+            setTimeout(showtime, 1000);
+        }
+
+          showtime();
+
+    </script>
+  </body>
+  <body>
+    
+    <nav class="menu-activea">
+      <h1>Menu</h1>
+      <ul>
+        <a href="Index.html" class="Home">
+            <span class="material-icons">home</span>Home
+        </a>
+        <a href="Chatbot.html" class="Chatbot">
+          <span class="material-icons">chat</span>Chatbot
+      </a>
+      <a href="Login.html" class="Logout">
+        <span class="material-icons">exit_to_app</span>Logout
+    </a>
+      </ul>
+
+    </nav>
+    <script>
+      (function() {
+  
+    var nav = $('nav'),
+      menu = $('nav h1'),
+      main = $('main'),
+      open = false,
+      hover = false;
+  
+    menu.on('click', function() {
+      open = !open ? true : false;
+      nav.toggleClass('menu-active');
+      main.toggleClass('menu-active');
+      nav.removeClass('menu-hover');
+      main.removeClass('menu-hover');
+      console.log(open);
+    });
+    menu.hover( 
+      function() {
+        if (!open) {
+          nav.addClass('menu-hover');
+          main.addClass('menu-hover');
+        }
+      }, function() {
+        nav.removeClass('menu-hover');
+        main.removeClass('menu-hover');
+      }
+    );
+  
+  })();
+      
+  </script>
+
+
+  </body>
+</html>

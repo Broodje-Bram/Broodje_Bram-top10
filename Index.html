@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <head>
+        <title>Home Page </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Css/Index.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+        <img src="css/fotos/BroodjeBramBackgroundSpace.png" alt="Avatar" class="avatar"> 
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="Broodje.html">Broodje</a></li>
+                    <li><a href="Chatbot.html">ChatBot</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="Login.html">Log Out</a>
+            <p onclick="openNav()" class="menu cta">Menu</p>
+        </header>
+        <section class="header">
+            <video autoplay loop class="video-background" muted plays-inline>
+                <source src="Css/Video/achtergrondvideo1.mp4" type="video/mp4">
+            </video>
+
+            <div class="Welkom_bericht">
+                <h1>Broodje Bram</h1>
+                <a>Dit is Broodje Bram zijn website, Welkom en kom het samen met mij verkennen</a>
+            </div>
+        </section>
+        <div id="MyClockDisplay" class="clock"></div>
+        <script type="text/javascript">
+            function showtime(){
+                var date = new Date();
+                var h = date.getHours(); // 0 - 23 uur
+                var m = date.getMinutes(); // 0 -59 min
+                var s = date.getSeconds(); //0 -59
+    
+                if(h == 0){
+                    h = 12;
+                }
+    
+    
+                if(h < 10){
+                    h = "0" + h;
+                }
+                
+                if(m < 10){
+                    m = "0" + m;
+                }
+    
+                if(s < 10){
+                    s = "0" + s;
+                }
+    
+                var time = h + ":" + m + ":" + s;
+                document.getElementById("MyClockDisplay").innertext = time;
+                document.getElementById("MyClockDisplay").textContent = time;
+    
+                setTimeout(showtime, 1000);
+            }
+    
+              showtime();
+    
+        </script>
+    </body>
+</html>
